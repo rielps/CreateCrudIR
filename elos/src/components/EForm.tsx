@@ -7,7 +7,6 @@ import FormItem from "antd/es/form/FormItem";
 type FieldType = {
   nome?: string;
   frase?: string;
-  remember?: string;
 };
 
 const onFinish: FormProps<FieldType>["onFinish"] = (values) => {
@@ -35,7 +34,7 @@ const EForm: React.FC = () => (
 
     <Form.Item<FieldType>
       label="Seu Nome"
-      nome="Seu nome"
+      name="nome"
       rules={[{ required: true, message: "Digite sua nome..." }]}
     >
       <Input />
@@ -43,7 +42,7 @@ const EForm: React.FC = () => (
 
     <Form.Item<FieldType>
       label="Sua Frase"
-      frase="Sua Frase"
+      name="frase"
       rules={[{ required: true, message: "Digite a frase aqui..." }]}
     >
       <Input />
