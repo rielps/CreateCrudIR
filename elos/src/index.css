@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #fff7df; /* Cor de fundo alterada */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -24,15 +24,16 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  background-color: #fff7df; /* Garantir que o body também tenha a cor */
   min-width: 320px;
   min-height: 100vh;
+  color: #333; /* Cor do texto escura para contraste */
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  color: #333;
 }
 
 button {
@@ -54,10 +55,11 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Remover estilos de dark mode já que estamos usando fundo claro */
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
+    background-color: #fff7df;
   }
   a:hover {
     color: #747bff;
@@ -65,4 +67,10 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* Garantir que o root div também tenha o fundo */
+#root {
+  background-color: #fff7df;
+  min-height: 100vh;
 }
