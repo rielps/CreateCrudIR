@@ -1,4 +1,5 @@
 import EBotao from "../components/EBotao";
+import ECard from "../components/ECard";
 import EForm from "../components/EForm";
 import Einput from "../components/EInput";
 import EModal from "../components/EModal";
@@ -10,6 +11,7 @@ const Home = () => {
       <EBotao placeholder="Click" />
       <EForm />
       <EModal />
+      <ECard />
     </>
   );
 };
